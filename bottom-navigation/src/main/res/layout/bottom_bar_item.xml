@@ -32,7 +32,6 @@
         android:layout_gravity="center_horizontal|top"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="4dp"
-        android:background="@drawable/dot_red"
         android:gravity="center"
         android:textColor="@android:color/white"
         android:textSize="10sp"

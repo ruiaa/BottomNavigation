@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.ruiaa.bottomnavigation.BottomBarView;
+import com.ruiaa.bottomnavigation.ItemView;
+import com.ruiaa.bottomnavigation.OnSelectListener;
 import com.ruiaa.bottomnavigation.ScrollFrameView;
 
 import java.util.ArrayList;
@@ -25,18 +27,18 @@ public class MainActivity extends AppCompatActivity {
         bottomBarView=(BottomBarView)findViewById(R.id.bar);
 
         bottomBarView
-                .addItem(new BottomBarView.ItemView(bottomBarView).setContent("msg",R.drawable.msg_active,R.drawable.msg_inactive))
-                .addItem(new BottomBarView.ItemView(bottomBarView).setContent("music",R.drawable.music_active,R.drawable.music_inactive))
-                .addItem(new BottomBarView.ItemView(bottomBarView).setContent("movie",R.drawable.movie_active,R.drawable.movie_inactive))
-                .addItem(new BottomBarView.ItemView(bottomBarView).setContent("sport",R.drawable.sport_active,R.drawable.sport_inactive))
-                .addItem(new BottomBarView.ItemView(bottomBarView).setContent("mine",R.drawable.mine_active,R.drawable.mine_inactive))
+                .addItem(new ItemView(bottomBarView).setContent("msg",R.drawable.msg_active,R.drawable.msg_inactive))
+                .addItem(new ItemView(bottomBarView).setContent("music",R.drawable.music_active,R.drawable.music_inactive))
+                .addItem(new ItemView(bottomBarView).setContent("movie",R.drawable.movie_active,R.drawable.movie_inactive))
+                .addItem(new ItemView(bottomBarView).setContent("sport",R.drawable.sport_active,R.drawable.sport_inactive))
+                .addItem(new ItemView(bottomBarView).setContent("mine",R.drawable.mine_active,R.drawable.mine_inactive))
                 .init();
 
         //scrollFrameView.setFragmentList(getFragmentManager(),getFragmentList());
         scrollFrameView.setFragmentList(getSupportFragmentManager(),getFragmentV4List());
         scrollFrameView.setBottomBarView(bottomBarView);
 
-        bottomBarView.setOnSelectListener(new BottomBarView.OnSelectListener() {
+        bottomBarView.setOnSelectListener(new OnSelectListener() {
             @Override
             public void onSelect(int position) {
                 Log.e("ruiaa","select"+position);
