@@ -218,11 +218,11 @@ public class ItemView {
     }
 
     public ItemView setDotOffsetInDp(int offsetTopDp, int offsetCenterHorizontalDp) {
-        return setDotSize(BottomNavUtils.dp2px(itemView.getContext(), offsetTopDp), BottomNavUtils.dp2px(itemView.getContext(), offsetCenterHorizontalDp));
+        return setDotOffset(BottomNavUtils.dp2px(itemView.getContext(), offsetTopDp), BottomNavUtils.dp2px(itemView.getContext(), offsetCenterHorizontalDp));
     }
 
     public ItemView setDotOffsetRes(@DimenRes int offsetTop, @DrawableRes int offsetCenterHorizontal) {
-        return setDotSize(BottomNavUtils.getDimenInPx(itemView.getContext(), offsetTop), BottomNavUtils.getDimenInPx(itemView.getContext(), offsetCenterHorizontal));
+        return setDotOffset(BottomNavUtils.getDimenInPx(itemView.getContext(), offsetTop), BottomNavUtils.getDimenInPx(itemView.getContext(), offsetCenterHorizontal));
     }
 
     //背景颜色

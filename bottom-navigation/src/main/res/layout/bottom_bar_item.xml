@@ -36,7 +36,6 @@
         android:textColor="@android:color/white"
         android:textSize="10sp"
         android:visibility="gone"
-        tool:text="10"
         />
 
 </FrameLayout>

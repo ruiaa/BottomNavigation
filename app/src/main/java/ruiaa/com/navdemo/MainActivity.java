@@ -26,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
         scrollFrameView=(ScrollFrameView)findViewById(R.id.container);
         bottomBarView=(BottomBarView)findViewById(R.id.bar);
 
+        //设置 item 默认样式
+        //bottomBarView.setTextColor(Color.RED,Color.GRAY).setTextSize(14).setImgSize(36,30).setTextImgDistance(6);
+        //设置小圆点默认样式
+        //bottomBarView.setDotSize(20,20).setDotBgColor(Color.GREEN).setDotTextSize(14).setDotTextColor(Color.MAGENTA).setDotOffset(30,20);
         bottomBarView
                 .addItem(new ItemView(bottomBarView).setContent("msg",R.drawable.msg_active,R.drawable.msg_inactive))
                 .addItem(new ItemView(bottomBarView).setContent("music",R.drawable.music_active,R.drawable.music_inactive))
@@ -46,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
         });
         //scrollFrameView.setCurrentItem(2);
         bottomBarView.setSelectWithFrame(2);
-
 
         bottomBarView.getItem(4).setDotText("?").setDotVisible(true);
 
