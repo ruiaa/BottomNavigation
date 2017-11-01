@@ -131,17 +131,17 @@ public class BottomBarView extends LinearLayout {
     public int textActiveColor = 0xff1296db;
     public int textInActiveColor = 0xff707070;
     public int textSize = 12;//sp
-    public int imgSizeW = 32;//dp
-    public int imgSizeH = 32;//dp
-    public int textImgDistance = 2;//dp
+    public int imgSizeW = 64;//px
+    public int imgSizeH = 64;//px
+    public int textImgDistance = 4;//px
 
-    public int dotSizeW = 16;//dp
-    public int dotSizeH = 16;//dp
+    public int dotSizeW = 32;//px
+    public int dotSizeH = 32;//px
     public int dotBgColor = 0xffff4444;
     public int dotTextSize = 10;//sp
     public int dotTextColor = 0xffffffff;
-    public int dotOffsetTop = 4;//dp
-    public int dotOffsetCenter = 12;//dp
+    public int dotOffsetTop = 8;//px
+    public int dotOffsetCenter = 24;//px
 
     public BottomBarView setTextColor(@ColorInt int activeColor, @ColorInt int inActiveColor) {
         textActiveColor = activeColor;
@@ -160,56 +160,51 @@ public class BottomBarView extends LinearLayout {
         return this;
     }
 
-    public BottomBarView setTextSizeRes(@DimenRes int size) {
-        textSize = (int) BottomNavUtils.getDimen(getContext(), size);
-        return this;
-    }
-
-    public BottomBarView setImgSize(int widthDp, int heightDp) {
-        imgSizeW = widthDp;
-        imgSizeH = heightDp;
+    public BottomBarView setImgSize(int widthPx, int heightPx) {
+        imgSizeW = widthPx;
+        imgSizeH = heightPx;
         return this;
     }
 
     public BottomBarView setImgSizeRes(@DimenRes int w, @DimenRes int h) {
-        imgSizeW = (int) BottomNavUtils.getDimen(getContext(), w);
-        imgSizeH = (int) BottomNavUtils.getDimen(getContext(), h);
+        imgSizeW = (int) BottomNavUtils.getDimenInPx(getContext(), w);
+        imgSizeH = (int) BottomNavUtils.getDimenInPx(getContext(), h);
         return this;
     }
 
-    public BottomBarView setImgSize(int dp) {
-        return setImgSize(dp, dp);
+    public BottomBarView setImgSize(int px) {
+        return setImgSize(px, px);
     }
 
     public BottomBarView setImgSizeRes(@DimenRes int size) {
         return setImgSizeRes(size, size);
     }
 
-    public BottomBarView setTextImgDistance(int dp) {
-        textImgDistance = dp;
+    public BottomBarView setTextImgDistance(int px) {
+        textImgDistance = px;
         return this;
     }
 
     public BottomBarView setTextImgDistanceRes(@DimenRes int distance) {
-        textImgDistance = (int) BottomNavUtils.getDimen(getContext(), distance);
+        textImgDistance = (int) BottomNavUtils.getDimenInPx(getContext(), distance);
         return this;
     }
 
-    public BottomBarView setDotSize(int widthDp, int heightDp) {
-        dotSizeW = widthDp;
-        dotSizeH = heightDp;
+    public BottomBarView setDotSize(int widthPx, int heightPx) {
+        dotSizeW = widthPx;
+        dotSizeH = heightPx;
         return this;
     }
 
     public BottomBarView setDotSizeRes(@DimenRes int w, @DimenRes int h) {
-        dotSizeW = (int) BottomNavUtils.getDimen(getContext(), w);
-        dotSizeH = (int) BottomNavUtils.getDimen(getContext(), h);
+        dotSizeW = (int) BottomNavUtils.getDimenInPx(getContext(), w);
+        dotSizeH = (int) BottomNavUtils.getDimenInPx(getContext(), h);
         return this;
     }
 
-    public BottomBarView setDotSize(int dp) {
-        dotSizeW = dp;
-        dotSizeH = dp;
+    public BottomBarView setDotSize(int px) {
+        dotSizeW = px;
+        dotSizeH = px;
         return this;
     }
 
@@ -219,11 +214,6 @@ public class BottomBarView extends LinearLayout {
 
     public BottomBarView setDotTextSize(int sp) {
         this.dotTextSize = sp;
-        return this;
-    }
-
-    public BottomBarView setDotTextSizeRes(@DimenRes int size) {
-        dotTextSize = (int) BottomNavUtils.getDimen(getContext(), size);
         return this;
     }
 
@@ -247,15 +237,15 @@ public class BottomBarView extends LinearLayout {
         return this;
     }
 
-    public BottomBarView setDotOffset(int topDp, int centerDp) {
-        this.dotOffsetTop = topDp;
-        this.dotOffsetCenter = centerDp;
+    public BottomBarView setDotOffset(int topPx, int centerPx) {
+        this.dotOffsetTop = topPx;
+        this.dotOffsetCenter = centerPx;
         return this;
     }
 
-    public BottomBarView setDotOffsetRes(@DimenRes int topDp, @DimenRes int centerDp) {
-        this.dotOffsetTop = (int) BottomNavUtils.getDimen(getContext(), topDp);
-        this.dotOffsetCenter = (int) BottomNavUtils.getDimen(getContext(), centerDp);
+    public BottomBarView setDotOffsetRes(@DimenRes int topPx, @DimenRes int centerPx) {
+        this.dotOffsetTop = (int) BottomNavUtils.getDimenInPx(getContext(), topPx);
+        this.dotOffsetCenter = (int) BottomNavUtils.getDimenInPx(getContext(), centerPx);
         return this;
     }
 }

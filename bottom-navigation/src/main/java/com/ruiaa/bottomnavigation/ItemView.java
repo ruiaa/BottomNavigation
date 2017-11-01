@@ -191,8 +191,8 @@ public class ItemView {
     private ItemView setContentDefaultStyle() {
         setTextColor(bottomBarView.textActiveColor, bottomBarView.textInActiveColor);
         setTextSize(bottomBarView.textSize);
-        setImgSizeInDp(bottomBarView.imgSizeW, bottomBarView.imgSizeH);
-        setTextImgDistanceInDp(bottomBarView.textImgDistance);
+        setImgSize(bottomBarView.imgSizeW, bottomBarView.imgSizeH);
+        setTextImgDistance(bottomBarView.textImgDistance);
         return this;
     }
 
@@ -275,10 +275,6 @@ public class ItemView {
         return this;
     }
 
-    public ItemView setDotTextSizeRes(@DimenRes int size) {
-        return setDotTextSize(BottomNavUtils.getDimen(itemView.getContext(), size));
-    }
-
     //字体颜色
     public ItemView setDotTextColor(@ColorInt int color) {
         dotView.setTextColor(color);
@@ -308,7 +304,7 @@ public class ItemView {
         setDotBgColor(bottomBarView.dotBgColor);
         setDotTextColor(bottomBarView.dotTextColor);
         setDotTextSize(bottomBarView.dotTextSize);
-        setDotSizeInDp(bottomBarView.dotSizeW, bottomBarView.dotSizeH);
-        setDotOffsetInDp(bottomBarView.dotOffsetTop, bottomBarView.dotOffsetCenter);
+        setDotSize(bottomBarView.dotSizeW, bottomBarView.dotSizeH);
+        setDotOffset(bottomBarView.dotOffsetTop, bottomBarView.dotOffsetCenter);
     }
 }

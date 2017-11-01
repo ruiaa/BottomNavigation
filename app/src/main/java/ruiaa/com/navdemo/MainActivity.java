@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
         bottomBarView.setSelectWithFrame(2);
 
         bottomBarView.getItem(4).setDotText("?").setDotVisible(true);
-
     }
 
     private List<Fragment> getFragmentList(){

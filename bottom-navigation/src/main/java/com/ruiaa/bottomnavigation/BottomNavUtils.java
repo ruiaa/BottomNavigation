@@ -12,10 +12,6 @@ import android.support.annotation.DrawableRes;
 
 public class BottomNavUtils {
 
-    public static float getDimen(Context context,int dimenFromR) {
-        return context.getResources().getDimension(dimenFromR);
-    }
-
     public static int getDimenInPx(Context context,int dimenFromR){
         return context.getResources().getDimensionPixelSize(dimenFromR);
     }
