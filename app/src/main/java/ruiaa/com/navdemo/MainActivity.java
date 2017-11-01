@@ -28,8 +28,15 @@ public class MainActivity extends AppCompatActivity {
 
         //设置 item 默认样式
         //bottomBarView.setTextColor(Color.RED,Color.GRAY).setTextSize(14).setImgSize(36,30).setTextImgDistance(6);
+        bottomBarView.setTextColor(Color.RED,Color.GRAY).setTextSize(14).setImgSize(R.dimen.dp_20).setTextImgDistance(R.dimen.dp_3);
         //设置小圆点默认样式
         //bottomBarView.setDotSize(20,20).setDotBgColor(Color.GREEN).setDotTextSize(14).setDotTextColor(Color.MAGENTA).setDotOffset(30,20);
+        bottomBarView
+                .setDotSize(R.dimen.dp_10)
+                .setDotBgColor(Color.GREEN)
+                .setDotTextSize(14)
+                .setDotTextColor(Color.MAGENTA)
+                .setDotOffset(R.dimen.dp_16,R.dimen.dp_10);
         bottomBarView
                 .addItem(new ItemView(bottomBarView).setContent("msg",R.drawable.msg_active,R.drawable.msg_inactive))
                 .addItem(new ItemView(bottomBarView).setContent("music",R.drawable.music_active,R.drawable.music_inactive))
